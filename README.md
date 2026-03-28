@@ -8,7 +8,7 @@ This project predicts house prices based on:
 - Bedrooms
 - Bathrooms
 
-## 🧠 ML Models Used
+## 🧠 Machine Learning Models Used
 - Decision Tree
 - Random Forest
 
