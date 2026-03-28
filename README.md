@@ -27,7 +27,6 @@ This project predicts house prices based on:
 
 ```bash
   pip install -r requirements.txt
-  streamlit run app.py
   python -m streamlit run app.py
 ```
 
