@@ -7,6 +7,7 @@ This project predicts house prices based on:
 - Area
 - Bedrooms
 - Bathrooms
+<img width="1915" height="633" alt="yy" src="https://github.com/user-attachments/assets/a72468c3-53fc-424b-a484-f7379fcd2280" />
 
 ## 🧠 Machine Learning Models Used
 - Decision Tree
