@@ -14,7 +14,7 @@ This project predicts house prices based on:
 
 ## 🚀 Features
 - Predict house price
-- Web app using Streamlit
+- Deploy Web app using Streamlit
 ## ⚙️ Installation
 
 #### Clone the project
