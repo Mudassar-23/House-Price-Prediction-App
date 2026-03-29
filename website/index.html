@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart House Price Predictor | Predictive Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#004d70",
+              "secondary-container": "#8a4cfc",
+              "secondary-fixed-dim": "#d2bbff",
+              "tertiary-fixed-dim": "#89ceff",
+              "error": "#ba1a1a",
+              "surface-container-highest": "#333739",
+              "secondary-fixed": "#eaddff",
+              "surface-container-low": "#1d2022",
+              "surface-container": "#191c1e",
+              "inverse-on-surface": "#191c1e",
+              "on-background": "#e2e2e5",
+              "surface-dim": "#111416",
+              "outline": "#8e9193",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#d2bbff",
+              "primary": "#c3c0ff",
+              "primary-container": "#372abf",
+              "on-error-container": "#ffdad6",
+              "outline-variant": "#43474a",
+              "on-secondary-container": "#eaddff",
+              "inverse-surface": "#e2e2e5",
+              "on-tertiary-fixed": "#b8e0ff",
+              "tertiary-container": "#004d70",
+              "error-container": "#93000a",
+              "tertiary": "#89ceff",
+              "primary-fixed": "#e3dfff",
+              "primary-fixed-dim": "#c3c0ff",
+              "on-primary-fixed": "#100069",
+              "surface-variant": "#43474a",
+              "on-primary": "#1a008c",
+              "surface-tint": "#c3c0ff",
+              "on-tertiary-fixed-variant": "#89ceff",
+              "secondary": "#d2bbff",
+              "on-surface-variant": "#c3c6cf",
+              "on-tertiary": "#00344d",
+              "on-error": "#ffffff",
+              "surface-bright": "#373a3c",
+              "on-secondary-fixed": "#25005a",
+              "surface-container-lowest": "#0c0f10",
+              "on-primary-fixed-variant": "#372abf",
+              "background": "#0f1113",
+              "surface-container-high": "#282a2d",
+              "on-surface": "#e2e2e5",
+              "surface": "#0f1113",
+              "on-tertiary-container": "#b8e0ff",
+              "inverse-primary": "#392cc1",
+              "on-primary-container": "#dbd7ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background font-body text-on-surface flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-white/5 shadow-2xl">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">home_work</span>
+<span class="text-2xl font-black text-white tracking-tighter font-headline">Predictive Editorial</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-headline font-bold tracking-tight" href="#">Predictor</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-white/10 transition-all duration-300 rounded-full active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-white/10 transition-all duration-300 rounded-full active:scale-95">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-16 pb-20 main-gradient">
+<!-- Hero Image Sequence Section -->
+<section id="hero-scroll" class="w-full h-[300vh] relative">
+  <div class="sticky top-0 h-screen w-full overflow-hidden">
+    <canvas id="hero-canvas" class="absolute inset-0 w-full h-full block bg-background"></canvas>
+    <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div id="hero-text" class="max-w-4xl px-6 text-center transition-opacity duration-500 ease-in-out">
+        <h1 class="font-headline font-extrabold text-5xl md:text-7xl text-white tracking-tight mb-6 drop-shadow-2xl">
+            House Price Predictor
+        </h1>
+        <p class="text-white text-xl md:text-2xl max-w-2xl mx-auto drop-shadow-lg font-medium">
+            Predict your house price instantly using our proprietary intelligence model tuned for modern market dynamics.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Prediction Card Section -->
+<div class="max-w-4xl mx-auto px-6 -mt-24 relative z-20">
+<div class="w-full max-w-2xl mx-auto bg-surface-container-low rounded-[1.5rem] p-8 md:p-12 shadow-[0_32px_64px_rgba(0,0,0,0.6)] relative overflow-hidden border border-white/5">
+<!-- Background Decorative Gradient -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 text-left">
+<!-- Area Input -->
+<div class="md:col-span-2">
+<label class="block font-label text-sm font-semibold text-on-surface-variant mb-2 ml-1" for="area">Area (sq ft)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">square_foot</span>
+<input id="area" class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary transition-all font-body text-on-surface placeholder:text-outline/40" placeholder="e.g. 2500" type="number" min="0"/>
+</div>
+</div>
+<!-- Bedrooms Input -->
+<div>
+<label class="block font-label text-sm font-semibold text-on-surface-variant mb-2 ml-1" for="bedrooms">Bedrooms</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">bed</span>
+<input id="bedrooms" class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary transition-all font-body text-on-surface placeholder:text-outline/40" placeholder="3" type="number" min="0"/>
+</div>
+</div>
+<!-- Bathrooms Input -->
+<div>
+<label class="block font-label text-sm font-semibold text-on-surface-variant mb-2 ml-1" for="bathrooms">Bathrooms</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">bathroom</span>
+<input id="bathrooms" class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary transition-all font-body text-on-surface placeholder:text-outline/40" placeholder="2" type="number" min="0" step="0.5"/>
+</div>
+</div>
+</div>
+<!-- Predict Action -->
+<button id="predict-btn" class="w-full primary-gradient text-white py-5 rounded-[1.5rem] font-headline font-bold text-lg shadow-xl hover:shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+                        Predict Price
+                    </button>
+<!-- Result Section -->
+<div id="result-section" class="mt-10 pt-10 border-t border-outline-variant/30 hidden">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-tertiary-container text-tertiary rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span> High Confidence</div>
+<div class="text-on-surface-variant font-label text-sm mb-1">Estimated Market Value</div>
+<div id="price-display" class="font-headline font-extrabold text-4xl md:text-5xl text-primary">
+                            $0
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-6 mt-auto bg-surface-container-lowest border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div>
+<span class="text-lg font-bold text-white font-headline">Predictive Editorial</span>
+<p class="font-body text-sm text-on-surface-variant mt-2">© 2024 The Predictive Editorial. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body text-sm text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all" href="#">Terms of Service</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+
+<script src="model.js"></script>
+<script src="script.js"></script>
+</body></html>

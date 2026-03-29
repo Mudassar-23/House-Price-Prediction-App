@@ -1,0 +1,14 @@
+.glass-nav {
+    background-color: rgba(15, 17, 19, 0.75);
+    backdrop-filter: blur(24px);
+}
+.main-gradient {
+    background: radial-gradient(circle at top right, #1a1c2e 0%, #0f1113 100%);
+}
+.primary-gradient {
+    background: linear-gradient(135deg, #534ad9 0%, #712ae2 100%);
+}
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
