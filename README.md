@@ -4,7 +4,7 @@
 
 ## 📌 Description
 
-A simple web application that predicts house prices based on Area, Bedrooms, and Bathrooms. The project uses a Random Forest machine learning model converted to JavaScript and runs entirely in the browser. No backend is required.
+A simple web application that predicts house prices based on Area, Bedrooms, and Bathrooms. The project uses a Random Forest machine learning model converted to JavaScript and runs entirely in the browser. No backend is required. The website interface was designed using Antigravity, a free tool for building modern web interfaces.
 
 ## 🧠 ML Models Used
 - Decision Tree
@@ -34,6 +34,14 @@ with open("model.js", "w") as f:
 - Include model.js in the website
 - HTML inputs take user data (Area, Bedrooms, Bathrooms)
 - Click Predict → JS function predictPrice() calls ML model → shows price
+
+
+## 🛠️ Technologies Used
+- Python – Train the Machine Learning model
+- m2cgen – Convert ML model from Python to JavaScript
+- JavaScript – Run ML model in the browser
+- HTML & CSS – Frontend UI design
+
 ## ⚙️ Installation
 
 #### Clone the project
